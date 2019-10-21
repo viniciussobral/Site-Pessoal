@@ -1,0 +1,609 @@
+body{
+
+    margin: 0; /*Sem margem fora do componente*/
+    padding: 0; /*padding dentro do componente margem interna*/
+    font-family: 'Nunito', sans-serif;
+    
+ 
+}
+
+.back{
+    float: left;
+    height: 100vh;
+    width: 100vw;
+
+    
+}
+
+.fundo{
+
+    background-image: url('../img/capa1.png');
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size:100%;
+}
+
+
+
+.menu{
+
+    float: left;
+    height: 120px; 
+    width: 100vw;
+    background-color: black; 
+    align-content: bottom;
+    position: fixed;
+
+
+}
+
+.logo{
+   float: left;
+    width:20vw;
+    height: 100%;
+    background: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+.link{
+    height: 100%;
+    width: 30vw;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 15vw; 
+
+}
+
+
+.link a{ 
+     
+        width: auto;
+        text-decoration: none;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        margin-left: 30px;
+    
+}
+
+.form_cadastro{
+
+    height: 620px;
+    width: 40%;
+    float: left;
+    margin-top: 200px;
+    margin-left: 500px;
+    margin-bottom: 100px;
+    background:white;
+    color: black;
+
+
+
+
+}
+
+.form_cadastro button{
+
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+
+.form_cadastro input{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+  
+}
+
+.form_cadastro input::placeholder{
+
+    text-align: center;
+
+}
+
+.form_cadastro label{
+
+    font-weight: bold;
+
+}
+
+.form_cadastro h2{
+
+    font-size: 30px;
+    font-weight: bold;
+
+
+}
+
+.form_contato{
+
+    height: 780px;
+    width: 43,5%;
+    float: left;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 500px;
+    background:white;
+    color: black;
+    margin-bottom: 100px;
+
+
+
+
+}
+
+.form_contato button{
+
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+
+}
+
+.btn_contato{
+
+    float: left;
+   margin-top: 70px;
+   margin-left: -220px;
+
+}
+
+.form_contato input{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+  
+}
+
+.form_contato textarea{
+
+    float: left;
+    width: 60%;
+    height: 100px;
+    margin-left: 20%;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+
+}
+
+.form_contato input::placeholder{
+
+    text-align: center;
+
+}
+
+.form_contato label{
+
+    font-weight: bold;
+
+}
+
+
+.form_contato h3{
+
+    font-size: 35px;
+    font-weight: bold;
+
+
+}
+
+
+.form_entrar{
+
+    height: 780px;
+    width: 43,5%;
+    float: left;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-bottom: 100px;
+    background:white;
+    color: black;
+
+
+
+
+}
+
+.form_entrar button{
+
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+
+}
+
+.btn_entrar{
+
+    float: left;
+   margin-top: 100px;
+margin-left: -200px;
+
+}
+
+.form_entrar input{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+  
+}
+
+.form_entrar select{
+
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+
+}
+
+.form_entrar input::placeholder{
+
+    text-align: center;
+
+}
+
+.form_entrar label{
+
+    font-weight: bold;
+
+}
+
+
+.form_entrar h3{
+
+    font-size: 35px;
+    font-weight: bold;
+
+
+}
+
+.texto_index{
+
+    height:890px;
+    width: 800px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 142px;
+    font-size: 21px;
+    text-align: justify;
+
+}
+
+.image_index1{
+
+    float: left;
+    margin-left: 1000px;
+    margin-top: -750px;
+
+   
+}
+
+.texto_index2{
+
+    height: 820px;
+    width: 800px;
+    float: left;
+    margin-left: 100px;
+    font-size: 21px;
+    text-align: justify;
+
+}
+
+
+.image_index2{
+
+    float: left;
+    margin-left: 1000px;
+    margin-top: -790px;
+   
+}
+
+.image_index3{
+
+    float: left;
+    margin-left: 1000px;
+    margin-top: -650px;
+
+   
+}
+
+.image_index4{
+
+    float: left;
+    margin-left: 1000px;
+    margin-top: -750px;
+
+   
+}
+
+
+
+.btn1{
+    background-color:whitesmoke;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+  
+   
+  
+  }
+
+  .btn1{
+
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 300px;
+    margin-left: 50px;
+  
+    
+
+  }
+
+  .btn2 {
+    background-color:whitesmoke;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 300px;
+    margin-left: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+   
+  
+  }
+
+  .btn3 {
+    background-color:whitesmoke;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 300px;
+    margin-left: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    outline: none;
+  
+   
+  
+  }
+
+
+#conteudo{
+
+
+    width: 100%;
+    height: 620px;
+    margin-top: 200px;
+    background:rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.4);
+
+    
+  
+  
+   
+    
+
+}
+
+#texto #title1{
+    font-size: 20px;
+    color: white;
+}
+
+#texto{
+    width: 30vw;
+    height: 20vh;
+    float: left;
+    color: white;
+    margin-top: 80px;
+    font-size: 23px;
+    margin-left: 100px;
+    text-align: justify;
+    font-weight: bold;
+   
+}
+
+#conteudo p{
+
+
+    float: left;
+    font-size: 22px;
+    margin-top: 1vh;
+    color: white;
+    font-weight: bold;
+}
+
+#conteudo img{
+
+    border-radius: 2px;
+    width: 540px;
+    height: 440px;
+    float: left;
+    margin-top: 90px;
+    margin-left: 150px;
+}
+
+
+/*fim conteudo*/
+
+
+/*começo conteudo2*/
+#conteudo2{
+   
+    width: 100%;
+    height: 620px;
+    margin-top: 200px;
+    background:rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.4);
+  
+
+}
+
+.texto #title2{
+
+    color: white;
+}
+
+.texto2{
+    width: 30vw;
+    height: 20vh;
+    float: left;
+    color: white;
+    margin-top: 80px;
+    font-size: 23px;
+    margin-left: 100px;
+    text-align: justify;
+   
+}
+
+#conteudo2 p{
+
+    float: left;
+    font-size: 22px;
+    margin-top: 1vh;
+    color: white;
+    font-weight: bold;
+    
+}
+
+#conteudo2 img{
+
+    border-radius: 2px;
+    width: 540px;
+    height: 440px;
+    float: left;
+    margin-top: 90px;
+    margin-left: 150px;
+    
+
+}
+
+/*fim conteudo2*/
+
+
+/*começo conteudo3*/
+#conteudo3{
+   
+    width: 100%;
+    height: 620px;
+    margin-top: 200px;
+    background:rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.4);
+    margin-bottom: 90px;
+
+
+}
+
+.texto #title3{
+
+    color: white;
+   
+}
+
+.texto3{
+    width: 30vw;
+    height: 20vh;
+    float: left;
+    color: white;
+    margin-top: 80px;
+    font-size: 23px;
+    margin-left: 100px;
+    text-align: justify;
+  
+   
+}
+
+#conteudo3 p{
+
+    float: left;
+    font-size: 22px;
+    margin-top: 1vh;
+    color: white;
+    font-weight: bold;
+    
+
+
+}
+
+#conteudo3 img{
+
+    border-radius: 2px;
+    width: 540px;
+    height: 440px;
+    float: left;
+    margin-top: 90px;
+    margin-left: 150px;
+
+}
