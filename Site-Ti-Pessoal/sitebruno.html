@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+
+
+<body>
+    <div id="estrutura">estrutura
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <div class="float">
+                    <li><a href="página de inicio"></a></li>
+                    <li><a href="./paginadelogin.html">Login</a></li>
+                    <li><a href="./cadastro.html">cadastro</a></li>
+                    <li><a href="./conteudo.html">conteudo</a></li>
+                </div>
+            </ul>
+        </nav>
+
+        <p>Olá seja bem vindo (a) a nossa página.
+            Nosso intuito é fazer com que saude melhore e para isso
+            estamos dispostos a te ajudar neste passo inicial.
+            Para melhor ajuda-lo iremos fazer disponibilizar a voce a
+            calculadora do imc.
+        </p>
+    </div>
+
+    <center>
+        <h2>Calculadora do IMC</h2>
+        <p> Peso: <input type="text" id="valor_peso"> </p>
+        <p>Altura: <input type="text" id="valor_altura"> </p>
+        <p><button onclick="calcIMC ()" id="btn1">Calcular IMC</button></p>
+
+
+
+        <div id="msg"></div>
+    </center>
+
+
+</body>
+
+</html>
+
+<script>
+    function calcIMC() {
+        var peso = Number(valor_peso.value);
+        var altura = Number(valor_altura.value);
+        var imc = peso / (altura * altura);
+
+
+        //substitui interacoes.html pela sua página funcionou certinho 
+        imc >= 35 || imc >= 39.99 ? `<a href="./interacoes.html"><button></button></a>` :
+            imc >= 30 && imc <= 34.99 ? `<a href="./interacoes.html"><button></button></a>` :
+                imc >= 25 && imc <= 29.99 ? `<a href="./interacoes.html"><button></button></a>` :
+                    imc >= 18.5 && imc <= 24.99 ? `<a href="./interacoes.html"><button></button></a>` :
+                        imc < 18.5 ? `<a href="./interacoes.html"><button></button></a>` : ``;
+    }
+
+</script>

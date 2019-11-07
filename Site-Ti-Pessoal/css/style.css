@@ -7,7 +7,16 @@ body{
  
 }
 
+.fundo{
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/*A div back formata todos os conteúdos de todas as páginas em umtamnho padrão*/
 .back{
+
     float: left;
     height: 100vh;
     width: 100vw;
@@ -15,44 +24,31 @@ body{
     
 }
 
-.fundo{
 
-    background-image: url('../img/capa1.png');
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    background-attachment: fixed;
-    background-size:100%;
-}
-
-
-
+ /*Inicio do item menu que está em todas páginas*/
 .menu{
 
-    float: left;
-    height: 120px; 
+    margin: 0; 
+    padding: 0;
+    height: 100px; 
     width: 100vw;
-    background-color: black; 
+    background-color: #2d3436; 
     align-content: bottom;
     position: fixed;
+    z-index: 2;
 
 
 }
 
 .logo{
-   float: left;
-    width:20vw;
-    height: 100%;
-    background: url('../img/logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-
-
-
-
+     float: left;
+     width:20vw;
+     height: 100%;
+     background: url('../img/logo.png');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ }
 
 .link{
     height: 100%;
@@ -73,30 +69,49 @@ body{
         color: white;
         font-family: 'Nunito', sans-serif;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 25px;
         margin-left: 30px;
     
 }
+/*Fim do item menu que está em todas páginas*/
 
+
+
+
+
+
+
+
+.container a{
+
+    float: left;
+    justify-content: space-around;
+    margin-left: 15vw; 
+    
+
+
+}
+
+
+
+/*Inicio do Form de cadastro*/
 .form_cadastro{
 
     height: 620px;
     width: 40%;
     float: left;
-    margin-top: 200px;
-    margin-left: 500px;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-left: 420px;
+    margin-bottom: 400px;
     background:white;
-    color: black;
-
-
+    color: #2d3436;
 
 
 }
-
+/*Botão do Form de cadastro*/
 .form_cadastro button{
 
-    background-color:black;
+    background-color:#2d3436;
     border: none;
     color: white;
     padding: 10px 22px;
@@ -113,7 +128,7 @@ body{
     width: 60%;
     margin-left: 20%;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #2d3436;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     outline: none;
@@ -140,6 +155,9 @@ body{
 
 }
 
+/*Fim form Cadastro*/
+
+/*Inicio do Form Contato*/
 .form_contato{
 
     height: 780px;
@@ -147,9 +165,9 @@ body{
     float: left;
     margin-top: 100px;
     margin-bottom: 100px;
-    margin-left: 500px;
+    margin-left: 400px;
     background:white;
-    color: black;
+    color: #2d3436;
     margin-bottom: 100px;
 
 
@@ -157,9 +175,10 @@ body{
 
 }
 
+/*Botão do Form Contato*/
 .form_contato button{
 
-    background-color:black;
+    background-color:#2d3436;
     border: none;
     color: white;
     padding: 10px 22px;
@@ -179,13 +198,14 @@ body{
    margin-left: -220px;
 
 }
+/*Fim do Botão Contato*/
 
 .form_contato input{
     float: left;
     width: 60%;
     margin-left: 20%;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #2d3436;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     outline: none;
@@ -225,27 +245,32 @@ body{
 
 
 }
+/*Fim do Form Contato*/
 
 
+/*Inicio do Form entrar*/
 .form_entrar{
 
-    height: 780px;
+    height: 700px;
     width: 43,5%;
     float: left;
-    margin-top: 100px;
-    margin-left: 500px;
-    margin-bottom: 100px;
+    position: relative;
+    top: 0;
+    bottom: 50vh;
+    margin-left: 400px;
     background:white;
-    color: black;
+    color: #2d3436;
+
 
 
 
 
 }
 
+/*Botão do Form entrar*/
 .form_entrar button{
 
-    background-color:black;
+    background-color:#2d3436;
     border: none;
     color: white;
     padding: 10px 22px;
@@ -265,13 +290,14 @@ body{
 margin-left: -200px;
 
 }
+/*Fim do Botão entrar*/
 
 .form_entrar input{
     float: left;
     width: 60%;
     margin-left: 20%;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #2d3436;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     outline: none;
@@ -310,35 +336,41 @@ margin-left: -200px;
 
 
 }
+/*Fim do Form entrar*/
 
+
+/*Começo do texto da index(home) e imagem, sobre a evolução tecnológica*/
 .texto_index{
 
-    height:890px;
-    width: 800px;
+    height:690px;
+    width: 600px;
     float: left;
-    margin-left: 100px;
-    margin-top: 142px;
-    font-size: 21px;
+    margin-left: 50px;
+    margin-top: 70px;
+    font-size: 17px;
     text-align: justify;
 
 }
 
 .image_index1{
 
+  
     float: left;
-    margin-left: 1000px;
-    margin-top: -750px;
+    margin-left: 720px;
+    margin-top: -540px;
 
    
 }
+/*Fim do texto da index(home) e imagem*/
 
+/*Começo do texto2 da index(home) e imagem, sobre a linha do tempo*/
 .texto_index2{
 
-    height: 820px;
-    width: 800px;
+    height:690px;
+    width: 600px;
     float: left;
-    margin-left: 100px;
-    font-size: 21px;
+    margin-left: 50px;
+    font-size: 16,5px;
     text-align: justify;
 
 }
@@ -347,40 +379,42 @@ margin-left: -200px;
 .image_index2{
 
     float: left;
-    margin-left: 1000px;
-    margin-top: -790px;
+    margin-left: 720px;
+    margin-top: -650px;
    
 }
+/*A div texto2 formata todos os textos da linha do tempo*/
 
 .image_index3{
 
     float: left;
-    margin-left: 1000px;
-    margin-top: -650px;
-
+    margin-left: 720px;
+    margin-top: -550px;
    
 }
 
 .image_index4{
 
     float: left;
-    margin-left: 1000px;
-    margin-top: -750px;
+    margin-left: 720px;
+    margin-top: -600px;
 
    
 }
 
+/*Aqui termina o conteúdo de texto e imagens da index (home), sobre a linha do tempo*/
 
 
+/*Começo dos botões da página de interações*/
 .btn1{
     background-color:whitesmoke;
     border: none;
     border-radius: 10px;
-    color: black;
-    padding: 15px 32px;
+    color: #2d3436;
+    padding: 11px 25px;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     outline: none;
@@ -393,8 +427,8 @@ margin-left: -200px;
 
     float: left;
     margin-bottom: 0px;
-    margin-top: 300px;
-    margin-left: 50px;
+    margin-top: 200px;
+    margin-left: 70px;
   
     
 
@@ -404,33 +438,39 @@ margin-left: -200px;
     background-color:whitesmoke;
     border: none;
     border-radius: 10px;
-    color: black;
-    padding: 15px 32px;
+    color: #2d3436;
+    padding: 11px 25px;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    margin-top: 300px;
-    margin-left: 50px;
+    font-size: 14px;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     outline: none;
    
   
+  }
+
+  .btn2{
+
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 200px;
+    margin-left: 70px;
+  
+  
+    
+
   }
 
   .btn3 {
     background-color:whitesmoke;
     border: none;
     border-radius: 10px;
-    color: black;
-    padding: 15px 32px;
+    color: #2d3436;
+    padding: 11px 25px;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    margin-top: 300px;
-    margin-left: 50px;
+    font-size: 14px;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     outline: none;
@@ -439,22 +479,31 @@ margin-left: -200px;
   
   }
 
+  
+  .btn3{
 
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 200px;
+    margin-left: 70px;
+  
+  
+    
+
+  }
+/*fim dos botões da página de interações*/
+
+
+/*Começo do conteudo da página de interações */
 #conteudo{
 
-
     width: 100%;
-    height: 620px;
-    margin-top: 200px;
+    height: 420px;
+    margin-top: 175px;
     background:rgb(0, 0, 0); 
     background: rgba(0, 0, 0, 0.4);
 
     
-  
-  
-   
-    
-
 }
 
 #texto #title1{
@@ -467,8 +516,8 @@ margin-left: -200px;
     height: 20vh;
     float: left;
     color: white;
-    margin-top: 80px;
-    font-size: 23px;
+    margin-top: 2vh;
+    font-size: 18px;
     margin-left: 100px;
     text-align: justify;
     font-weight: bold;
@@ -479,117 +528,110 @@ margin-left: -200px;
 
 
     float: left;
-    font-size: 22px;
-    margin-top: 1vh;
+    font-size: 18px;
+    margin-top: 2vh;
     color: white;
     font-weight: bold;
 }
 
-#conteudo img{
+.carousel-cell img{
 
-    border-radius: 2px;
-    width: 540px;
-    height: 440px;
+    border-radius: 4px;
+    width: 400px;
+    height: 300px;
     float: left;
-    margin-top: 90px;
-    margin-left: 150px;
+    margin-top: 40px;
+    margin-left: 60px;
+    transition-delay: 1s;
 }
+/*Fim do conteudo da página de interações */
 
 
-/*fim conteudo*/
-
-
-/*começo conteudo2*/
+/*Começo do conteudo2 da página de interações */
 #conteudo2{
    
-    width: 100%;
-    height: 620px;
-    margin-top: 200px;
+    width: 80vw;
+    height: 420px;
+    margin-top: 250px;
     background:rgb(0, 0, 0); 
     background: rgba(0, 0, 0, 0.4);
   
 
 }
 
-.texto #title2{
+#title2{
 
+    font-size: 20px;
     color: white;
 }
 
-.texto2{
+#texto2{
+
     width: 30vw;
     height: 20vh;
     float: left;
     color: white;
-    margin-top: 80px;
-    font-size: 23px;
+    margin-top: 2vh;
+    font-size: 18px;
     margin-left: 100px;
     text-align: justify;
+    font-weight: bold;
    
 }
 
 #conteudo2 p{
 
     float: left;
-    font-size: 22px;
-    margin-top: 1vh;
+    font-size: 18px;
+    margin-top: 2vh;
     color: white;
     font-weight: bold;
     
 }
 
-#conteudo2 img{
-
-    border-radius: 2px;
-    width: 540px;
-    height: 440px;
-    float: left;
-    margin-top: 90px;
-    margin-left: 150px;
-    
-
-}
-
-/*fim conteudo2*/
+/*Fim do conteudo da página de interações */
 
 
-/*começo conteudo3*/
+/*Começo do conteudo3 da página de interações */
 #conteudo3{
-   
+
     width: 100%;
-    height: 620px;
-    margin-top: 200px;
+    height: 420px;
+    margin-top: 175px;
     background:rgb(0, 0, 0); 
     background: rgba(0, 0, 0, 0.4);
-    margin-bottom: 90px;
 
 
 }
 
 .texto #title3{
 
+ 
+    font-size: 20px;
     color: white;
    
 }
 
-.texto3{
+#texto3{
+
     width: 30vw;
     height: 20vh;
     float: left;
     color: white;
-    margin-top: 80px;
-    font-size: 23px;
+    margin-top: 2vh;
+    font-size: 18px;
     margin-left: 100px;
     text-align: justify;
+    font-weight: bold;
   
    
 }
 
 #conteudo3 p{
 
-    float: left;
-    font-size: 22px;
-    margin-top: 1vh;
+   float: left;
+    font-size: 18px;
+    margin-top: 2vh;
     color: white;
     font-weight: bold;
     
@@ -599,11 +641,13 @@ margin-left: -200px;
 
 #conteudo3 img{
 
-    border-radius: 2px;
-    width: 540px;
-    height: 440px;
+    border-radius: 4px;
+    width: 400px;
+    height: 300px;
     float: left;
-    margin-top: 90px;
-    margin-left: 150px;
+    margin-top: 40px;
+    margin-left: 60px;
+    transition-delay: 1s;
 
 }
+/*Fim do conteudo3 da página de interações */

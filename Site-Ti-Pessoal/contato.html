@@ -11,7 +11,7 @@
     <title>Evolution of Tech</title>
 </head>
 
-<body class="fundo" style="background-image: url('./img/regi.png')">
+<body class="fundo" style="background-image: url('./img/feedback.png')">
 
     <div class="back">
 
@@ -81,11 +81,13 @@
 
     function limpar() {
 
-        nome.value = "";
-        email.value = "";
-        msn.value = "";
 
-        alert(`Obrigado pelo Feedback!`);
+
+        nome.value == "" ? alert(`Preencha o campo nome`) : email.value == "" ? alert(`Preencha o campo e-mail`) :
+            msn.value == "" ? alert(`Preencha o campo mensagem`) : alert(`Obrigado pelo Feedback!`); nome.value = ""; email.value = ""; msn.value = "";
+
+
+
 
 
 

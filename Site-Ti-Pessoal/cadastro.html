@@ -42,19 +42,19 @@
 
                 <label for="">Nome Completo</label>
                 <br><br>
-                <input placeholder="Digite seu nome" autofocus>
+                <input placeholder="Digite seu nome" autofocus id="nome">
                 <br><br><br>
                 <label for="">Usuário</label>
                 <br><br>
-                <input placeholder="Digite o nome de usuário">
+                <input placeholder="Digite o nome de usuário" id="user">
                 <br><br><br>
                 <label for="">Senha</label>
                 <br><br>
-                <input type="password" placeholder="Digite sua senha">
+                <input type="password" placeholder="Digite sua senha" id="senha">
                 <br><br><br>
                 <label for="">Confirmar senha</label>
                 <br><br>
-                <input type="password" placeholder="Digite sua senha novamente">
+                <input type="password" placeholder="Digite sua senha novamente" id="confirmar_senha">
                 <br><br><br>
 
 
@@ -62,7 +62,7 @@
 
 
             <center>
-                <a href="./entrar.html"> <button class="btn">Cadastrar</button></a>
+                <button class="btn" onclick="validar_cadastro()">Cadastrar</button>
                 <br><br>
 
             </center>
@@ -78,3 +78,23 @@
 </body>
 
 </html>
+
+<script>
+
+    function validar_cadastro() {
+
+
+        nome.value == "" ? alert(`Preencha o campo nome`) : user.value == "" ? alert(`Preencha o campo usuário`) : senha.value == "" ? alert(`Preencha o campo senha`) :
+            confirmar_senha.value == "" ? alert(`Preencha o campo confirmar senha`) : window.location.href = `./entrar.html`;
+
+
+
+
+
+
+
+    }
+
+
+
+</script>
