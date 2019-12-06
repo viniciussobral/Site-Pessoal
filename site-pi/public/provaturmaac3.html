@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Continuada 3</title>
+</head>
+
+<body>
+    Informe: <br>
+    Nome do astronauta: <input id="nome"><br>
+    Quantidade de dias: <input id="dia"><br>
+    Quantidade de horas: <input id="hora"><br>
+    Quantidade de minutos: <input id="minuto"><br>
+    <button onclick="registrar()">Registrar viagem</button><br>
+    <button onclick="atualizar()">Relatorio de viagens</button>
+    <div id="msg"></div>
+    <img src="">
+</body>
+
+</html>
+<script>
+    var nomes = [];
+    var dias = [];
+    var horas = [];
+    var minutos = [];
+    var registrado = 0;
+
+    function registrar() {
+        var days = Number(dia.value);
+        var hours = Number(hora.value);
+        var minute = Number(minuto.value);
+
+
+        // if (nome.value.length == 0) {
+        //     alert("Insira um nome")
+        // } else {
+        //     nomes.push(nome.value);
+        // }
+
+        if (days <= 0 && hours <= 0 && minute <= 0) {
+            alert("Informe um tempo de viagem válido");
+        } else {
+            nomes.push(nome.value);
+            dias.push(days);
+            horas.push(hours);
+            minutos.push(minute);
+            registrado = 1; // para desligar o botão Relatório de viagens caso não tenha uma viagem cadastrada
+        }
+    }
+
+    function atualizar() {
+        msg.innerHTML = '';
+
+        if (registrado == 1) {
+            msg.innerHTML += `Foram registradas <b>${dias.length}</b> viagens, detalhadas a seguir:<br><br>`;
+
+            for (contador = 0; contador < dias.length; contador++) {
+                var d = Number(dias[contador]);
+                var h = Number(horas[contador]);
+                var m = Number(minutos[contador]);
+                var diasMin = (d * 1440);
+                var horasMin = (h * 60);
+                var totalMin = (diasMin + horasMin + m);
+                var minTerra = (totalMin * 49);
+                var total = parseInt(minTerra / 525600); //parseInt é mais correto apenas para eliminar a casa decimal pois o toFixed iria arredondar
+                // fiz o teste e quando o resultado dava por exemplo 0.6 anos, aparecia como 1 ano.
+                // o parseInt irá apenas retirar as casas decimais, 1.1 anos é 1 ano, 1.9 anos é 1 ano, 2.5 anos são 2 anos.
+
+
+                msg.innerHTML += `Viagem <b>${contador + 1}</b>:<br>
+            Astronauta <b>${nomes[contador]}</b> ficou fora por pelo menos <b>${total}</b> anos no Tempo da Terra.<br>
+            A criança que nasceu quando ele saiu provavelmente está assim:<br>`;
+                if (total <= 13) {
+                    msg.innerHTML += `<img src="13.png"><br><br>`;
+                }
+                else if (total <= 30) {
+                    msg.innerHTML += `<img src="13-30.png"><br><br>`;
+                }
+                else if (total <= 65) {
+                    msg.innerHTML += `<img src="30-65.png"><br><br>`;
+                }
+                else if (total <= 100) {
+                    msg.innerHTML += `<img src="65-100.png"><br><br>`;
+                }
+                else {
+                    msg.innerHTML += `<img src="100m.png"><br><br>`;
+                }
+
+            }
+        } else {
+            alert("Não foi cadastrada nenhuma viagem")
+        }
+
+    }
+
+// dia = 1440m
+// hora = 60m
+// converter tudo em minutos 
+// 1 ano possui 525600
+
+</script>

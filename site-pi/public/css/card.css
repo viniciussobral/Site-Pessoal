@@ -1,0 +1,121 @@
+/* container com a perspectiva */
+.flip-container {
+	perspective: 1000;
+}
+	/* feito com o hover */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* velocidade da animação */
+.flipper {
+	transition: 2s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* esconder parte de trás do painel durante a troca */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* coloca o painel frontal acima */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* painel de volta, inicialmente escondido */
+.back {
+	transform: rotateY(180deg);
+}
+
+.box-front img{
+	width:350px;
+	height:350px;
+
+}
+
+.box-back img{
+	width:350px;
+	height:350px;
+
+}
+
+/* Começo da div texto1 */
+  .texto1 b{
+	
+	font-size:30px;
+	line-height:100px;
+     margin-left: 30px;
+	color: black;
+	cursor:pointer;
+  }
+
+  .texto1 p{
+	
+	font-size:18px;
+	line-height:30px;
+     margin-left: 0px;
+	color: black;
+	cursor:pointer;
+  }
+/* final da div texto1 */
+
+
+/* Começo da div texto2 */
+  .texto2 b{
+	
+	font-size:25px;
+	line-height:50px;
+     margin-left: 40px;
+	color: black;
+	cursor:pointer;
+  }
+
+  .texto2 p{
+	
+	font-size:18px;
+	line-height:30px;
+     margin-left: 0px;
+	color: black;
+	cursor:pointer;
+  }
+
+  /* final da div texto2 */
+
+
+/* Começo da div texto3 */
+  .texto3 b{
+	
+	font-size:30px;
+	line-height:100px;
+     margin-left: 30px;
+	color: black;
+	cursor:pointer;
+  }
+
+  .texto3 p{
+	
+	font-size:18px;
+	line-height:30px;
+     margin-left: 0px;
+	color: black;
+	cursor:pointer;
+  }
+
+  /* Final da div texto3 */
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);

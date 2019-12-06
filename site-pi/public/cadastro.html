@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/computer.png">
+    <title>Evolution of Tech</title>
+</head>
+
+<body class="fundo" style="background-image: url('./img/cadas.png')">
+
+
+
+    <div class="back">
+
+        <nav class="menu">
+
+            <div class="logo" style="float:left">
+            </div>
+
+            <div class="link">
+                <a href="./index.html">Home</a>
+                <a href="./contato.html">Contato</a>
+                <a href="./cadastro.html">Cadastro</a>
+                <a href="./entrar.html">Entrar</a>
+
+            </div>
+
+        </nav>
+        <br><br>
+
+
+        <div class="form_cad">
+
+            <center>
+
+                <h2>Cadastre-se</h2>
+
+
+
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+
+                    <label for="">Nome Completo</label>
+                    <br><br>
+                    <input placeholder="Digite seu nome" autofocus id="nome" name="nome" required minlength="4">
+                    <br><br><br>
+                    <label for="">Usuário</label>
+                    <br><br>
+                    <input placeholder="Digite o nome de usuário" id="user" name="login" required minlength="4">
+                    <br><br><br>
+                    <label for="">Senha</label>
+                    <br><br>
+                    <input type="password" placeholder="Digite sua senha" id="senha" name="senha" required
+                        minlength="4">
+                    <br><br><br>
+                    <!-- <label for="">Confirmar senha</label>
+                    <br><br>
+                    <input type="password" placeholder="Digite sua senha novamente" id="confirmar_senha"
+                        name="conf_senha" required minlength="4"> -->
+
+                    <!-- <br><br><br> -->
+
+                    <button id="btn">Cadastrar</button>
+                    <br><br>
+
+
+                </form>
+
+
+                <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
+
+                <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+                    Erro no cadastro
+                </div>
+
+
+            </center>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                window.location.href = 'entrar.html';
+
+            } else {
+
+                alert('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn.disabled = true;
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar() {
+        btn.disabled = false;
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
+    }
+
+</script>

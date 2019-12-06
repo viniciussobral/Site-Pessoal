@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="icon" href="./img/computer.png">
+    <title>Evolution of Tech</title>
+</head>
+
+<body class="fundo" style="background-image: url('./img/log.png')">
+
+
+    <div class="back">
+
+        <nav class="menu">
+
+            <div class="logo" style="float:left">
+            </div>
+
+            <div class="link">
+                <a href="./hometelevisao.html">Home</a>
+                <a href="./contatotelevisao.html">Contato</a>
+                <a href="./televisao.html">Evolução/Televisor</a>
+                <a href="./entrartelevisao.html">Entrar</a>
+
+            </div>
+
+        </nav>
+        <br><br>
+
+
+        <div class="form_entrar">
+
+            <img src="./img/login2.png" alt="">
+
+            <center>
+
+                <h3>Entrar</h3>
+
+                <label for="">Usuário</label><br>
+                <input id="nome" placeholder="Digite seu nome de Usuário" autofocus>
+                <br><br><br>
+                <label for="">Senha</label><br>
+                <input id="senha" type="password" placeholder="Digite sua senha">
+                <br><br><br>
+
+                <label for="">O que deseja ver a evolução ?</label>
+                <select name="" id="opc">
+                    <option value="">- Ver Opções -</option>
+                    <option value="t">Todos</option>
+                    <option value="cpu">Computador</option>
+                    <option value="tele">Televisão</option>
+                    <option value="cel">Celular</option>
+
+                </select>
+
+
+            </center>
+
+
+            <button class="btn_entrar" onclick="ver_interacoes()">Entrar</button>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+<script>
+
+
+    function ver_interacoes() {
+
+        var valor_opc = opc.value;
+
+
+        nome.value == "" ? alert(`Preencha o campo usuário`) : senha.value == "" ? alert(`Preencha o campo senha`) :
+            valor_opc == "t" && nome.value == "vinicius" && senha.value == "vini123" ? window.location.href = `./todos.html` :
+                valor_opc == "cpu" && nome.value == "vinicius" && senha.value == "vini123" ? window.location.href = `./computador.html` :
+                    valor_opc == "tele" && nome.value == "vinicius" && senha.value == "vini123" ? window.location.href = `./televisao.html` :
+                        valor_opc == "cel" && nome.value == "vinicius" && senha.value == "vini123" ? window.location.href = `./celular.html` :
+                            nome.value != "vinicius" && senha.value != "vini123" ? alert(`Usuario e senha não cadastrado`) : nome.value = ""; senha.value = "";
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+</script>
