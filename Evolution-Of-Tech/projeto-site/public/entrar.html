@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/computer.png">
+    <script src="./funcoes.js"></script>
+    <title>Evolution of Tech</title>
+</head>
+
+<body class="fundo" style="background-image: url('./img/log.png')">
+
+
+    <div class="back">
+
+        <nav class="menu">
+
+            <a href="./index.html">
+                <div class="logo" style="margin-top: 3px">
+                </div>
+            </a>
+
+            <div class="link">
+                <a href="./index.html">Home</a>
+                <a href="./contato.html">Contato</a>
+                <a href="./cadastro.html">Cadastro</a>
+                <a href="./entrar.html">Entrar</a>
+
+            </div>
+
+        </nav>
+        <br><br>
+
+
+        <div class="form_entrar">
+
+            <img src="./img/login2.png" alt="">
+
+            <center>
+
+                <h3>Entrar</h3>
+                <form id="form_login" method="POST" onsubmit="return logar()">
+
+                    <label for="">Usuário</label><br>
+                    <input id="nome" name="login" placeholder="Digite seu nome de Usuário" autofocus>
+                    <br><br><br>
+                    <label for="">Senha</label><br>
+                    <input id="senha" name="senha" type="password" placeholder="Digite sua senha">
+                    <br><br><br>
+
+                    <label for="">O que deseja ver a evolução ?</label>
+                    <select name="" id="opc">
+                        <option value="">- Ver Opções -</option>
+                        <option value="t">Todos</option>
+                        <option value="cpu">Computador</option>
+                        <option value="tele">Televisão</option>
+                        <option value="cel">Celular</option>
+
+                    </select>
+
+                    <button id="btn_entrar">Entrar</button>
+
+
+                </form>
+
+
+
+            </center>
+
+        </div>
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    function logar() {
+
+
+        var formulario = new URLSearchParams(new FormData(form_login));
+
+        if (nome.value == "") {
+
+            alert(`Preencha o campo usuário`)
+        }
+        else if (senha.value == "") {
+
+            alert(`Preencha o campo senha`)
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    var valor_opc = opc.value;
+
+                    if (valor_opc == "t") {
+
+                        window.location.href = `./todos.html`;
+                    }
+                    else if (valor_opc == "cpu") {
+
+                        window.location.href = `./computador.html`;
+                    }
+                    else if (valor_opc == "tele") {
+
+                        window.location.href = `./televisao.html`;
+
+                    }
+                    else if (valor_opc == "cel") {
+
+                        window.location.href = `./celular.html`;
+                    }
+
+
+                });
+            } else {
+
+                alert('Erro de login!');
+
+            }
+        });
+        return false;
+    }
+
+
+
+
+
+</script>

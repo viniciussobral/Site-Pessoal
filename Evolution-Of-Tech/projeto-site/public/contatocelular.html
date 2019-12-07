@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/computer.png">
+    <title>Evolution of Tech</title>
+</head>
+
+<body class="fundo" style="background-image: url('./img/feedback.png')">
+
+    <div class="back">
+
+        <nav class="menu">
+
+            <div class="logo" style="float:left">
+            </div>
+
+            <div class="link">
+                <a href="./homecelular.html">Home</a>
+                <a href="./contatocelular.html">Contato</a>
+                <a href="./celular.html">Evolução</a>
+                <a href="./preco.html">Celulares</a>
+                <a href="./entrarcelular.html">Entrar</a>
+            </div>
+
+        </nav>
+        <br><br>
+
+
+
+        <div class="form_contato">
+
+            <img src="./img/feed.png" alt="">
+
+            <center>
+
+                <h3>Contato</h3>
+
+                <label for="">Nome</label><br>
+                <br>
+                <input id="nome" placeholder="Digite seu nome" autofocus>
+                <br><br><br>
+                <label for="">E-mail</label><br>
+                <br>
+                <input id="email" type="email" placeholder="Digite seu E-mail">
+                <br><br><br>
+                <label for="">Mensagem</label><br>
+                <br>
+                <textarea id="msn" placeholder="Digite o seu Feedback" name="" id="" cols="30" rows="10"></textarea>
+                <br><br><br>
+
+            </center>
+
+            <center>
+
+                <button class="btn_contato" onclick="limpar()">Enviar</button>
+
+            </center>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    function cadastrar() {
+
+        var formulario = new URLSearchParams(new FormData(form_contact));
+        fetch("/contatos/enviar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+
+                alert("Obrigado pelo Feedback!!")
+
+                nome.value = "";
+                email.value = "";
+                msn.value = "";
+
+
+            } else {
+
+                alert('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+
+            }
+        });
+
+        return false;
+    }
+
+
+
+</script>
